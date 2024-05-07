@@ -531,6 +531,10 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@1.1.vendor \
     vendor.qti.hardware.display.mapper@2.0.vendor
 
+# Refresh rate override feature
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.surface_flinger.enable_frame_rate_override=true
+
 # GPS
 PRODUCT_PACKAGES += \
     flp.conf
