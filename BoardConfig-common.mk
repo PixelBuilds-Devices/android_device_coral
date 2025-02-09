@@ -51,7 +51,6 @@ TARGET_KERNEL_CLANG_COMPILE := true
 KERNEL_SUPPORTS_LLVM_TOOLS := true
 TARGET_KERNEL_CONFIG := floral_defconfig
 TARGET_KERNEL_SOURCE := kernel/google/msm-4.14
-TARGET_NEEDS_DTBOIMAGE := true
 
 BOARD_KERNEL_CMDLINE += console=ttyMSM0,115200n8 androidboot.console=ttyMSM0 printk.devkmsg=on
 BOARD_KERNEL_CMDLINE += msm_rtb.filter=0x237
@@ -71,9 +70,6 @@ BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_BOOT_HEADER_VERSION := 2
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 
-# DTBO partition definitions
-BOARD_DTBOIMG_PARTITION_SIZE := 8388608
-
 TARGET_NO_KERNEL := false
 BOARD_USES_RECOVERY_AS_BOOT := true
 BOARD_USES_METADATA_PARTITION := true
@@ -84,7 +80,6 @@ AB_OTA_PARTITIONS += \
     boot \
     system \
     vbmeta \
-    dtbo \
     product \
     system_ext \
     vbmeta_system \
